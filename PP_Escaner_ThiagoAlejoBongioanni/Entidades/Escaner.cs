@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -32,6 +34,7 @@ namespace Entidades
             this.tipo = tipo;
             this.listaDocumentos = new List<Documento>();
 
+            //no va aca encontrar otro lugar
             if (tipo == TipoDoc.mapa)
             {
                 this.locacion = Departamento.mapoteca;
@@ -51,6 +54,42 @@ namespace Entidades
         public string Marca { get => marca;}
         public TipoDoc Tipo { get => tipo;}
 
+        public static bool operator ==(Escaner e, Documento d)
+        {
+            bool retorno = false;
+
+            foreach (Documento doc in e.ListaDocumentos)
+            {
+                // nunca sobre carge equals no funcionaba correctamente en la version anterior
+                if (doc.Titulo == d.Titulo && doc.Autor == d.Autor && doc.Anio == d.Anio && doc.Barcode == d.Barcode)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
+        }
+
+        public static bool operator !=(Escaner e, Documento d)
+        { 
+            return  !(e == d);
+        }
+
+        public static bool operator +(Escaner e, Documento d)
+        {
+           
+            bool retorno = false;
+
+            if(e != d && d.Estado == Documento.Paso.Inicio)
+            {
+                //solucionar al cambiar primero el estado nunca modifica el estado del primer dato
+       
+                e.ListaDocumentos.Add(d);
+                e.CambiarEstadoDocumento(d);
+                retorno = true;
+            }
+           
+            return retorno;
+        }
 
         public bool CambiarEstadoDocumento(Documento d)
         {
@@ -58,11 +97,10 @@ namespace Entidades
 
             foreach (Documento docu in ListaDocumentos)
             {
-                if (docu.Equals(d)) // Suponiendo que la clase Documento tiene un método Equals adecuado
-                {
-                    retorno = docu.AvanzarEstado(); // Cambiar el estado del documento encontrado
+                    retorno = true;
+                    d.AvanzarEstado(); // Cambiar el estado del documento encontrado
                     break; // Salimos del bucle una vez que encontramos y cambiamos el estado del documento
-                }
+
             }
 
             return retorno;
