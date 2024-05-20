@@ -38,6 +38,7 @@ namespace Test
                 Console.WriteLine($"{doc.Titulo} - Estado: {doc.Estado}");
             }
 
+            //primer testeo
             /* Libro doc = new Libro("el jaja", "epe", 12, "ee", "ddd",10);
              Libro doc2 = new Libro("el jajas", "pepe", 12, "e", "dd", 10);
 
