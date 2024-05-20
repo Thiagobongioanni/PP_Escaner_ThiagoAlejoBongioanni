@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "5qj2XJH/03jobwmjbRN+8+UooX15ssKiJ/7JnW3ws5PpXNR5C0x9qVgOIv/idoO0nwLZBBQaAv7pXvDoZLiguw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\PC-HP\\Desktop\\PP_Escaner_ThiagoAlejoBongioanni\\Entidades\\Entidades.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\PC-HP\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.18\\microsoft.windowsdesktop.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\PC-HP\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.18\\microsoft.netcore.app.ref.7.0.18.nupkg.sha512",
+    "C:\\Users\\PC-HP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.18\\microsoft.aspnetcore.app.ref.7.0.18.nupkg.sha512"
+  ],
+  "logs": []
+}

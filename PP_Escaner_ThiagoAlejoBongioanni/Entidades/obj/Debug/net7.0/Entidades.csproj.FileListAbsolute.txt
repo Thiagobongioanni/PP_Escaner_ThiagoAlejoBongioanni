@@ -1,0 +1,12 @@
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\bin\Debug\net7.0\Entidades.deps.json
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\bin\Debug\net7.0\Entidades.dll
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\bin\Debug\net7.0\Entidades.pdb
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.AssemblyInfo.cs
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.sourcelink.json
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.dll
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\refint\Entidades.dll
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\Entidades.pdb
+C:\Users\PC-HP\Desktop\PP_Escaner_ThiagoAlejoBongioanni\Entidades\obj\Debug\net7.0\ref\Entidades.dll
