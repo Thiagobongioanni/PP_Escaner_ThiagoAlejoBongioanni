@@ -34,7 +34,6 @@ namespace Entidades
             this.tipo = tipo;
             this.listaDocumentos = new List<Documento>();
 
-            //no va aca encontrar otro lugar
             if (tipo == TipoDoc.mapa)
             {
                 this.locacion = Departamento.mapoteca;
@@ -54,13 +53,20 @@ namespace Entidades
         {
             bool retorno = false;
 
-            foreach (Documento doc in e.ListaDocumentos)
+            // Verificar si cualquiera de los objetos es null
+            
+
+            if (d != null && e.ListaDocumentos != null)
             {
-                // nunca sobrecarge equals no funcionaba correctamente en la version anterior
-                if (doc.Titulo == d.Titulo && doc.Autor == d.Autor && doc.Anio == d.Anio && doc.Barcode == d.Barcode)
+                foreach (Documento doc in e.ListaDocumentos)
                 {
-                    retorno = true;
+                    // nunca sobrecarge equals no funcionaba correctamente en la version anterior
+                    if (doc.Titulo == d.Titulo && doc.Autor == d.Autor && doc.Anio == d.Anio && doc.Barcode == d.Barcode)
+                    {
+                        retorno = true;
+                    }
                 }
+               
             }
             return retorno;
         }
@@ -75,14 +81,23 @@ namespace Entidades
            
             bool retorno = false;
 
-            if(e != d && d.Estado == Documento.Paso.Inicio)
+            if (ReferenceEquals(e, null) || ReferenceEquals(d, null))
             {
-                d.AvanzarEstado();
-                e.ListaDocumentos.Add(d);
-            
-                retorno = true;
+                retorno =  false;
             }
-           
+            else
+            {
+                if (e.ListaDocumentos != null)
+                {
+                    if (e != d && d.Estado == Documento.Paso.Inicio)
+                    {
+                        d.AvanzarEstado();
+                        e.ListaDocumentos.Add(d);
+
+                        retorno = true;
+                    }
+                }
+            }
             return retorno;
         }
 
@@ -90,16 +105,23 @@ namespace Entidades
         {
             bool retorno = false;
 
-            foreach (Documento docu in ListaDocumentos)
+            if (d == null)
             {
-                if (docu.Equals(d))
-                {
-                    docu.AvanzarEstado(); // Cambiar el estado del documento encontrado en ListaDocumentos
-                    return true; // Documento encontrado y estado cambiado
-                }
-                
+                retorno = false;
             }
+            else
+            {
 
+                foreach (Documento docu in ListaDocumentos)
+                {
+                    if (this.ListaDocumentos.Contains(d))
+                    {
+                        docu.AvanzarEstado(); // Cambiar el estado del documento encontrado en ListaDocumentos
+                        return true; // Documento encontrado y estado cambiado
+                    }
+
+                }
+            }
             return retorno;
         }
     }

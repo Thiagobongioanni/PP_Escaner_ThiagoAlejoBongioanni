@@ -43,14 +43,14 @@ namespace Entidades
         {
             StringBuilder text = new StringBuilder(base.ToString());
 
-            int barcodeIndex = text.ToString().IndexOf("Barcode:");
+            int barcodeIndex = text.ToString().IndexOf("Cod. de Barras:");
 
-            // Si se encuentra "Barcode:", insertar la línea de ISBN antes de ella
+            // Si se encuentra "Cod. de Barras:", insertar la línea de ISBN antes de ella
             if (barcodeIndex != -1)
             {
                 text.Insert(barcodeIndex, $"ISBN: {this.ISBN}\n");
             }
-            text.AppendLine($"Num Paginas: {this.NumPaginas}");
+            text.AppendLine($"Numero de paginas: {this.NumPaginas}");
            
             return text.ToString();
         }

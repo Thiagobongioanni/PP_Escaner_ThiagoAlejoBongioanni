@@ -46,7 +46,8 @@ namespace Entidades
         {
 
             StringBuilder text = new StringBuilder(base.ToString());
-            text.AppendLine($"Superficie:{this.Ancho} * {this.Alto} = {this.Superficie} cm2.");
+            text.AppendLine($"Superficie: {this.Ancho} * {this.Alto} = {this.Superficie} cm2.");
+
             if(this.NumNormalizado != "")
             {
                 text.AppendLine($"ISBN:{this.NumNormalizado}");

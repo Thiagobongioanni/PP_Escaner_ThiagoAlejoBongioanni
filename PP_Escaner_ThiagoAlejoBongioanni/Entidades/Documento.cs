@@ -56,8 +56,8 @@ namespace Entidades
             StringBuilder text = new StringBuilder();
             text.AppendLine($"Titulo: {this.Titulo}");
             text.AppendLine($"Autor: {this.Autor}");
-            text.AppendLine($"Año:{this.Anio}");
-            text.AppendLine($"Barcode:{this.Barcode}");
+            text.AppendLine($"Año: {this.Anio}");
+            text.AppendLine($"Cod. de Barras: {this.Barcode}");
 
             return text.ToString();
         }

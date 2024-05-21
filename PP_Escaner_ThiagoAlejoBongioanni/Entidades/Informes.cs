@@ -24,19 +24,18 @@ namespace Entidades
                     {
                         cantidad++;
                         extension += libro.NumPaginas;
-                        resumenBuilder.AppendLine($"Libro: {libro.Titulo}, Autor: {libro.Autor}, Páginas: {libro.NumPaginas}");
-
+                        resumenBuilder.AppendLine(libro.ToString());
                     }
                     else if (e.Tipo == Escaner.TipoDoc.mapa && doc is Mapa mapa)
                     {
                         cantidad++;
                         extension += mapa.Superficie;
-                        resumenBuilder.AppendLine($"mapa: {mapa.Titulo}, Autor: {mapa.Autor}, cm2: {mapa.Superficie}");
+                        resumenBuilder.AppendLine(mapa.ToString());
                     }
                 }
 
             }
-            resumen = resumenBuilder.ToString();
+           resumen = resumenBuilder.ToString();
         }
 
         public static void MostrarDistribuidos(Escaner e, out int extension, out int cantidad, out string resumen)
