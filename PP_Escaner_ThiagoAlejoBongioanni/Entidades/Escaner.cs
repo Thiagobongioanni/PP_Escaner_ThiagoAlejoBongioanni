@@ -117,7 +117,7 @@ namespace Entidades
                     if (this.ListaDocumentos.Contains(d))
                     {
                         docu.AvanzarEstado(); // Cambiar el estado del documento encontrado en ListaDocumentos
-                        return true; // Documento encontrado y estado cambiado
+                        retorno = true; // Documento encontrado y estado cambiado
                     }
 
                 }
